@@ -35,10 +35,15 @@ import java.util.Map;
  */
 class ConsumerRepository<T> implements Iterable<ConsumerInfo>
 {
+    /**
+     * event handler 与 事件处理线程一一对应
+     */
     private final Map<EventHandler<?>, EventProcessorInfo<T>> eventProcessorInfoByEventHandler =
         new IdentityHashMap<>();
+    //为啥线程和sequence 放到map中保存映射关系
     private final Map<Sequence, ConsumerInfo> eventProcessorInfoBySequence =
         new IdentityHashMap<>();
+    //保存线程信息
     private final Collection<ConsumerInfo> consumerInfos = new ArrayList<>();
 
     public void add(

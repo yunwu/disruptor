@@ -20,6 +20,7 @@ package com.lmax.disruptor;
  * Coordination barrier for tracking the cursor for publishers and sequence of
  * dependent {@link EventProcessor}s for processing a data structure
  */
+//队列栅栏处理， TODO
 public interface SequenceBarrier
 {
     /**

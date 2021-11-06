@@ -336,6 +336,7 @@ public class Disruptor<T>
      */
     public RingBuffer<T> start()
     {
+        //通过CAS设置state状态值
         checkOnlyStartedOnce();
         for (final ConsumerInfo consumerInfo : consumerRepository)
         {

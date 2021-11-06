@@ -81,7 +81,7 @@ public interface Sequenced
      *
      * @param sequence the sequence to be published.
      */
-    void publish(long sequence);
+    void ublish(long sequence);
 
     /**
      * Batch publish sequences.  Called when all of the events have been filled.

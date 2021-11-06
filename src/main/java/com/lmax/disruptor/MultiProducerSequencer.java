@@ -174,6 +174,12 @@ public final class MultiProducerSequencer extends AbstractSequencer
         return next;
     }
 
+    @Override
+    public void ublish(final long sequence)
+    {
+
+    }
+
     /**
      * @see Sequencer#remainingCapacity()
      */
@@ -188,7 +194,7 @@ public final class MultiProducerSequencer extends AbstractSequencer
     /**
      * @see Sequencer#publish(long)
      */
-    @Override
+
     public void publish(final long sequence)
     {
         setAvailable(sequence);

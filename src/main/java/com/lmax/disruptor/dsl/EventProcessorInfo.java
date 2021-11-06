@@ -29,11 +29,18 @@ import java.util.concurrent.ThreadFactory;
  *
  * @param <T> the type of the configured {@link EventHandler}
  */
+
+/**
+ * 事件处理线程
+ * @param <T>
+ */
 class EventProcessorInfo<T> implements ConsumerInfo
 {
     private final EventProcessor eventprocessor;
     private final EventHandler<? super T> handler;
     private final SequenceBarrier barrier;
+
+    //TODO 什么时候用这个字段链条中断标志
     private boolean endOfChain = true;
 
     EventProcessorInfo(

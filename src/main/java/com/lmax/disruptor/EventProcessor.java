@@ -35,6 +35,7 @@ public interface EventProcessor extends Runnable
     /**
      * Signal that this EventProcessor should stop when it has finished consuming at the next clean break.
      * It will call {@link SequenceBarrier#alert()} to notify the thread to check status.
+     * TODO 下一次清理之前停掉，下一次清理指啥？？？
      */
     void halt();
 

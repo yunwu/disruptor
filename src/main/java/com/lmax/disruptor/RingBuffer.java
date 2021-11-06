@@ -44,6 +44,7 @@ abstract class RingBufferFields<E> extends RingBufferPad
         final EventFactory<E> eventFactory,
         final Sequencer sequencer)
     {
+        //
         this.sequencer = sequencer;
         this.bufferSize = sequencer.getBufferSize();
 
